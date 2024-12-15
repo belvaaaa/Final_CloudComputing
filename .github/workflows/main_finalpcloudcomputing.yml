@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'FinalPCloudComputing'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4C6CB5383DE84481A3EEE2FFF1168669 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BB4071306559413EACAFAFC996EF603C }}
