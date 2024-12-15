@@ -12,10 +12,11 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # MySQL configuration
 conn = connector.connect(
-    host='localhost',
-    user='root',
-    passwd='',
-    database='fpcc'
+    user="fpcloudcomp", 
+    password="Finalcc123", 
+    host="webcloudcomputing.mysql.database.azure.com", 
+    port=3306, 
+    database="sementera"
 )
 cursor = conn.cursor()
 
