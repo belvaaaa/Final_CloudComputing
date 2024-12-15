@@ -17,7 +17,9 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sementera`
+-- Tambahkan pembuatan database
+CREATE DATABASE IF NOT EXISTS sementera;
+USE sementera;
 --
 
 -- --------------------------------------------------------
