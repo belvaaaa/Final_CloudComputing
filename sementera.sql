@@ -88,7 +88,7 @@ INSERT IGNORE INTO `pemesanan` (`id`, `id_user`, `nama_pemesan`, `metode_pembaya
 -- Foreign Keys
 -- Pastikan foreign key hanya ditambahkan jika tabel pengguna mendukungnya
 ALTER TABLE `pemesanan`
-  ADD CONSTRAINT `pemesanan_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`);
+  ADD CONSTRAINT `pemesanan` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
