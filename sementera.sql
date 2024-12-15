@@ -16,6 +16,9 @@ SET time_zone = "+00:00";
 CREATE DATABASE IF NOT EXISTS sementera;
 USE sementera;
 
+-- Drop the `pemesanan` table if it already exists
+DROP TABLE IF EXISTS `pemesanan`;
+
 -- Drop the `users` table if it already exists
 DROP TABLE IF EXISTS `users`;
 
@@ -34,9 +37,6 @@ INSERT INTO `users` (`id_user`, `name`, `email`, `phone`, `password`) VALUES
 (1, 'jhofany', 'dadasd@gmail.com', '77267821', 'pbkdf2:sha256:600000$6LZRXbUA2jPVeCaZ$10ddfd87cdde871c42dc47c81be7565444df2e07edb5da8cdb13e0876dc993ef'),
 (2, 'pertemuan5', 'a23sd@gmail.com', '213', 'pbkdf2:sha256:600000$TfmYlaflTiNUTnrQ$b88df3691bdc2dc7f0f0a91a00516abcbe0f2449a51f69f520d328a52c7d4912');
 
--- Drop the `pemesanan` table if it already exists
-DROP TABLE IF EXISTS `pemesanan`;
-
 -- Table structure for table `pemesanan`
 CREATE TABLE `pemesanan` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
@@ -54,9 +54,6 @@ CREATE TABLE `pemesanan` (
 INSERT INTO `pemesanan` (`id`, `id_user`, `nama_pemesan`, `metode_pembayaran`, `status`, `total_pekerja`) VALUES
 (1, 1, 'jhofany', 'DANA', 'Accepted', 2);
 
--- Drop the `admin` table if it already exists
-DROP TABLE IF EXISTS `admin`;
-
 -- Table structure for table `admin`
 CREATE TABLE `admin` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
@@ -68,9 +65,6 @@ CREATE TABLE `admin` (
 -- Data for table `admin`
 INSERT INTO `admin` (`id`, `email`, `password`) VALUES
 (1, 'admin@example.com', 'adminpass');
-
--- Drop the `pekerja` table if it already exists
-DROP TABLE IF EXISTS `pekerja`;
 
 -- Table structure for table `pekerja`
 CREATE TABLE `pekerja` (
