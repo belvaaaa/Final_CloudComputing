@@ -16,6 +16,9 @@ SET time_zone = "+00:00";
 CREATE DATABASE IF NOT EXISTS sementera;
 USE sementera;
 
+-- Drop the `users` table if it already exists
+DROP TABLE IF EXISTS `users`;
+
 -- Table structure for table `users`
 CREATE TABLE `users` (
   `id_user` INT(11) NOT NULL AUTO_INCREMENT,
