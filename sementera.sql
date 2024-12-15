@@ -13,6 +13,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 -- Database: `sementera`
+CREATE DATABASE IF NOT EXISTS sementera;
+USE sementera;
 
 -- Table structure for table `users`
 CREATE TABLE `users` (
