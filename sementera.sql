@@ -22,12 +22,18 @@ DROP TABLE IF EXISTS `pemesanan`;
 -- Drop the `users` table if it already exists
 DROP TABLE IF EXISTS `users`;
 
+-- Drop the `admin` table if it already exists
+DROP TABLE IF EXISTS `admin`;
+
+-- Drop the `pekerja` table if it already exists
+DROP TABLE IF EXISTS `pekerja`;
+
 -- Table structure for table `users`
 CREATE TABLE `users` (
   `id_user` INT(11) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
   `email` VARCHAR(255) NOT NULL,
-  `phone` VARCHAR(20) NOT NULL,  -- Changed to VARCHAR to store phone numbers properly
+  `phone` VARCHAR(20) NOT NULL,  -- Changed to VARCHAR(20) for proper phone number handling
   `password` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -70,7 +76,7 @@ INSERT INTO `admin` (`id`, `email`, `password`) VALUES
 CREATE TABLE `pekerja` (
   `id_pekerja` INT(11) NOT NULL AUTO_INCREMENT,
   `nama_pekerja` VARCHAR(30) NOT NULL,
-  `kontak` VARCHAR(15) NOT NULL,  -- Changed to VARCHAR to store phone numbers properly
+  `kontak` VARCHAR(15) NOT NULL,  -- Changed to VARCHAR(15) for proper phone number handling
   PRIMARY KEY (`id_pekerja`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
